@@ -1,11 +1,12 @@
 require "rspec"
 
 describe "test" do
-#  def isWinningMove? move
-#  end
+  def isWinningMove? move
+    move == "rock"
+  end
   it do
     expect(
-      isWinningMove "rock"
+      isWinningMove? "rock"
       ).to eq true
   end
 end
