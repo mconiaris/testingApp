@@ -22,10 +22,16 @@ describe "test" do
     ).to eq true
   end
 
+
+  def abc(moveOne, moveTwo)
+    xyz[moveOne] > xyz[moveTwo]
+  end
+
+  # TODO: Fix this part and factor in it with the abc method
   it "where I have chosen rock and my opponent has
     chosen scissors" do
     expect(
-      xyz[:rock] > xyz[:scissors]
+      abc(xyz[:rock] > xyz[:scissors]
     ).to eq true
   end
 
