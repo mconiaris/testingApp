@@ -31,7 +31,7 @@ describe "test" do
   it "where I have chosen rock and my opponent has
     chosen scissors" do
     expect(
-      abc(xyz[:rock] > xyz[:scissors]
+      abc(xyz[:rock], xyz[:scissors])
     ).to eq true
   end
 
