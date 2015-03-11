@@ -1,22 +1,25 @@
 require "rspec"
 
 describe "test" do
-  def isWinningMove? myMove, bothMoves
-    myMove == "rock"
+  def xyz
+    {
+      rock: 0,
+      paper: 1,
+      scissors: 2
+    }
   end
-  it "when playing rock against scissors" do
+
+  it do
+    expect(xyz[:rock] < xyz[:paper]).to eq true
+  end
+  it do
+    expect(xyz[:paper] < xyz[:scissors]).to eq true
+  end
+  it do
     expect(
-      isWinningMove? "rock", ["rock", "scissors"]
-      ).to eq true
+      xyz[:scissors] < xyz[:rock] ||
+        xyz[:scissors] -2 == xyz[:rock]
+    ).to eq true
   end
-    it "when playing scissors against paper" do
-    expect(
-      isWinningMove? "scissors", ["paper", "scissors"]
-      ).to eq true
-  end
-    it "when my move is not in both moves" do
-  expect(
-    isWinningMove? "scissors", ["paper", "rock"]
-    ).to eq false
-  end
+
 end
